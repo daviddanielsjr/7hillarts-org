@@ -1,0 +1,48 @@
+{
+  "buildCommand": "",
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "7hillarts.com" }],
+      "destination": "https://7hillarts.org/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.7hillarts.com" }],
+      "destination": "https://7hillarts.org/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "sevenhillarts.org" }],
+      "destination": "https://7hillarts.org/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.sevenhillarts.org" }],
+      "destination": "https://7hillarts.org/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "sevenhillarts.com" }],
+      "destination": "https://7hillarts.org/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.sevenhillarts.com" }],
+      "destination": "https://7hillarts.org/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.7hillarts.org" }],
+      "destination": "https://7hillarts.org/:path*",
+      "permanent": true
+    }
+  ]
+}

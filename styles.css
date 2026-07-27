@@ -1,0 +1,383 @@
+/* 7 Hill Arts — launch page
+   Palette pulled from logo package README + mark-primary-light.svg */
+
+:root {
+  /* Seven points, west to east */
+  --sound: #1f5a72;
+  --sky: #5aa6cc;
+  --blush: #e58ba8;
+  --beacon: #c9922f;
+  --sienna: #8a4e2e;
+  --umber: #5a3020;
+  --ebony: #241a16;
+
+  /* Anchors + ground */
+  --basalt: #14161a;
+  --paper: #efede6;
+  --ink: #16181a; /* wordmark ink from lockup SVG */
+  --water-deep: #191e20; /* first water band */
+  --water-mid: #3e7fa0; /* second water band */
+
+  /* Derived usage tokens (from logo stops only) */
+  --bg: var(--paper);
+  --text: var(--ebony);
+  --text-muted: var(--umber);
+  --accent: var(--beacon);
+  --accent-deep: var(--sound);
+  --border: rgba(36, 26, 22, 0.14);
+  --focus: var(--sound);
+
+  --font: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --space: 1.5rem;
+  --max-width: 42rem;
+  --header-h: 4.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 0.75rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 400;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Focus — visible on every interactive control */
+a:focus-visible,
+button:focus-visible,
+.btn-primary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+/* Sticky header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  min-height: var(--header-h);
+  padding: 0.75rem clamp(1rem, 4vw, 2rem);
+  background: rgba(239, 237, 230, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.logo-img {
+  display: block;
+  height: 2.35rem;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem 1.15rem;
+}
+
+.nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nav a:hover {
+  color: var(--accent-deep);
+}
+
+/* Main */
+main {
+  flex: 1;
+}
+
+/* Hero — full-bleed image, brand + tagline beneath on paper */
+.hero {
+  margin-bottom: 3.25rem;
+}
+
+.hero-image-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: clamp(14rem, 52vw, 28rem);
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.hero-text {
+  max-width: calc(var(--max-width) + 4rem);
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 4vw, 2rem) 0;
+}
+
+.hero h1 {
+  font-family: var(--font);
+  font-size: clamp(2.4rem, 7vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 0.55rem;
+}
+
+.tagline {
+  font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+  font-weight: 400;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 28rem;
+  line-height: 1.45;
+}
+
+/* Sections */
+.section {
+  max-width: calc(var(--max-width) + 4rem);
+  margin: 0 auto 3.25rem;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.section h2 {
+  font-family: var(--font);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0 0 1rem;
+}
+
+.about-copy p,
+.focus-item p,
+.section-lead,
+.donate-note,
+.check-block {
+  font-size: 1.02rem;
+  color: var(--text);
+  margin: 0 0 1.05rem;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.focus-grid {
+  display: grid;
+  gap: 1.15rem;
+  margin-bottom: 1.75rem;
+}
+
+.focus-item strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.pillars {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sienna);
+  line-height: 1.6;
+}
+
+.outbound {
+  margin: 1.35rem 0 0;
+}
+
+.outbound a {
+  color: var(--accent-deep);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.outbound a:hover {
+  color: var(--sienna);
+  border-bottom-color: var(--sienna);
+}
+
+/* Support / connect */
+.connect-section .section-lead {
+  margin-bottom: 1.5rem;
+}
+
+.cta-row {
+  margin: 0 0 0.85rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.8rem 1.75rem;
+  background: var(--ebony);
+  color: var(--paper);
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  border: 1px solid var(--ebony);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--sound);
+  border-color: var(--sound);
+  color: var(--paper);
+}
+
+.donate-note {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  max-width: 34rem;
+}
+
+.check-block {
+  margin-top: 1.5rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 34rem;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: 2.5rem clamp(1rem, 4vw, 2rem) 2.25rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  max-width: calc(var(--max-width) + 4rem);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.footer-logo {
+  display: block;
+  width: 5.5rem;
+  height: auto;
+  margin: 0 auto 1.25rem;
+}
+
+.credit,
+.copyright {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.credit {
+  margin-bottom: 0.45rem;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* One restrained scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(0.85rem);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Narrow phones — 360px target */
+@media (max-width: 420px) {
+  html {
+    font-size: 16px;
+  }
+
+  .header {
+    align-items: center;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .logo-img {
+    height: 1.85rem;
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0.75rem;
+    row-gap: 0.2rem;
+    justify-items: end;
+    max-width: none;
+  }
+
+  .nav a {
+    font-size: 0.7rem;
+  }
+
+  .hero-image {
+    height: 13.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.15rem;
+  }
+
+  .pillars {
+    letter-spacing: 0.08em;
+    font-size: 0.68rem;
+  }
+}
