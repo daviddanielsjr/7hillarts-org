@@ -251,13 +251,6 @@ main {
   margin: 0 0 0.65rem;
 }
 
-.program-theme-note {
-  margin: 0 0 0.85rem;
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  max-width: 36rem;
-}
-
 .focus-item strong {
   font-family: var(--font-display);
   font-weight: 600;
