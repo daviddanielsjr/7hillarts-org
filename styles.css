@@ -20,6 +20,8 @@
 
   /* Derived usage tokens (from logo stops only) */
   --bg: var(--paper);
+  --bg-soft: #e4e2dd; /* soft grey grounded in Paper/Basalt family */
+  --bg-white: #ffffff;
   --text: var(--ebony);
   --text-muted: var(--umber);
   --accent: var(--beacon);
@@ -58,7 +60,8 @@ body {
   font-family: var(--font-body);
   font-weight: 400;
   color: var(--text);
-  background: var(--bg);
+  background: linear-gradient(to right, var(--bg-soft) 0%, var(--bg-white) 100%);
+  background-attachment: fixed;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -88,7 +91,11 @@ button:focus-visible,
   gap: 1rem;
   min-height: var(--header-h);
   padding: 0.75rem clamp(1rem, 4vw, 2rem);
-  background: rgba(239, 237, 230, 0.92);
+  background: linear-gradient(
+    to right,
+    rgba(228, 226, 221, 0.92) 0%,
+    rgba(255, 255, 255, 0.92) 100%
+  );
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
