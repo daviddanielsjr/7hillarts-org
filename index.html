@@ -35,7 +35,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:opsz,wght@8..48,400;8..48,500;8..48,600;8..48,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -43,10 +43,10 @@
     <header class="header">
       <a href="#top" class="logo" aria-label="7 Hill Arts home">
         <img
-          src="images/lockup-horizontal-light-notag.svg"
-          alt="7 Hill Arts"
-          width="200"
-          height="48"
+          src="images/lockup-horizontal-light.svg"
+          alt="7 Hill Arts: Holding space for healing through the arts"
+          width="280"
+          height="68"
           class="logo-img"
         />
       </a>
@@ -69,9 +69,15 @@
             height="768"
           />
         </div>
-        <div class="hero-text">
-          <h1 id="hero-heading">7 Hill Arts</h1>
-          <p class="tagline">Holding space for healing through the arts.</p>
+        <div class="hero-brand">
+          <h1 id="hero-heading" class="visually-hidden">7 Hill Arts</h1>
+          <img
+            src="images/lockup-horizontal-light.svg"
+            alt="7 Hill Arts: Holding space for healing through the arts"
+            width="620"
+            height="150"
+            class="hero-lockup"
+          />
         </div>
       </section>
 
@@ -105,12 +111,23 @@
 
       <section id="founder" class="section reveal">
         <h2>About the Founder</h2>
-        <div class="about-copy">
-          <p>David Daniels, founder of 7 Hill Arts, brings 22 years of nonprofit governance and leadership experience to the organization, including ArtsFund Board Leadership Training and nine years of board and volunteer service at Three Dollar Bill Cinema, Seattle's premier LGBTQ film organization. He served on the Board of Directors of Ada Developers Academy and as a Scholarship Reviewer for Pride Foundation. David also brings 20 years of senior people leadership experience across Microsoft, Pinterest, Snap, Atlassian, and Gusto. A Birmingham, Alabama native and Capitol Hill resident, David founded 7 Hill Arts to formalize the monthly arts gatherings he has been hosting in his home since October 2025.</p>
+        <div class="founder-layout">
+          <img
+            src="images/david-daniels.jpg"
+            alt="David Daniels, founder of 7 Hill Arts"
+            class="founder-photo"
+            width="541"
+            height="720"
+          />
+          <div class="founder-copy">
+            <div class="about-copy">
+              <p>David Daniels, founder of 7 Hill Arts, brings 22 years of nonprofit governance and leadership experience to the organization, including ArtsFund Board Leadership Training and nine years of board and volunteer service at Three Dollar Bill Cinema, Seattle's premier LGBTQ film organization. He served on the Board of Directors of Ada Developers Academy and as a Scholarship Reviewer for Pride Foundation. David also brings 20 years of senior people leadership experience across Microsoft, Pinterest, Snap, Atlassian, and Gusto. A Birmingham, Alabama native and Capitol Hill resident, David founded 7 Hill Arts to formalize the monthly arts gatherings he has been hosting in his home since October 2025.</p>
+            </div>
+            <p class="outbound">
+              <a href="https://daviddaniels.ai" target="_blank" rel="noopener">More on David's work in leadership and workforce strategy → daviddaniels.ai</a>
+            </p>
+          </div>
         </div>
-        <p class="outbound">
-          <a href="https://daviddaniels.ai" target="_blank" rel="noopener">More on David's work in leadership and workforce strategy → daviddaniels.ai</a>
-        </p>
       </section>
 
       <section id="support" class="section connect-section reveal">
