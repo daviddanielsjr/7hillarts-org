@@ -391,6 +391,17 @@ main {
   margin-right: auto;
 }
 
+.credit a,
+.copyright a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.credit a:hover {
+  color: var(--accent-deep);
+}
+
 /* One restrained scroll reveal */
 .reveal {
   opacity: 0;
